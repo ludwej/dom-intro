@@ -22,15 +22,25 @@ function calculateBtnClicked(){
         else if (billItem === "sms"){
             billTotal += 0.75;
         }
-    }
+}
+
 
     //round to two decimals
     var roundedBillTotal = billTotal.toFixed(2);
     billTotalElement.innerHTML = roundedBillTotal;
+   if (billTotal >= 30){
+      // adding the danger class will make the text red
+        billTotalElement.classList.add("danger");
+  }
+  else if (billTotal  >= 20){
+      billTotalElement.classList.add("warning");
+
 }
 
+}
 //link the function to a click event on the calculate button
 calculateBtn.addEventListener('click', calculateBtnClicked);
+
 
     // get the string entered in the textArea
 
