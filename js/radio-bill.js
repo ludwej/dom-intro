@@ -40,9 +40,15 @@ function radioBillTotal(){
     if (totalCost >= 50){
         // adding the danger class will make the text red
         totalTwo.classList.add("danger");
+          totalTwo.classList.remove("warning");
     }
     else if (totalCost >= 30){
         totalTwo.classList.add("warning");
+        totalTwo.classList.remove("danger");
+
+    }
+    else {
+              totalTwo.classList.remove("");
     }
 };
 

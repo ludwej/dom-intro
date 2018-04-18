@@ -35,9 +35,11 @@ var totalCost=0 ;
   if (totalCost >= 50){
       // adding the danger class will make the text red
       totalOne.classList.add("danger");
+        totalOne.classList.remove("warning");
   }
   else if (totalCost >= 30){
     totalOne.classList.add("warning");
+      totalOne.classList.remove("danger");
   }
 
 
