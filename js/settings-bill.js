@@ -68,11 +68,15 @@ function totalSetting(){
     if (totalCost >= criticalLevel){
         // adding the danger class will make the text red
         totalSettings.classList.add("danger");
-        totalSettings.classList.remove("danger");
+
     }
     else if (totalCost >= warningLevel ){
         totalSettings.classList.add("warning");
-        totalSettings.classList.add("danger");
+
+    }
+    else {
+      totalSettings.classList.remove("danger");
+      totalSettings.classList.remove("danger");
     }
 };
 
