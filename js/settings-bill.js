@@ -65,19 +65,31 @@ function totalSetting(){
     totalSettings.innerHTML = totalCost.toFixed(2);
 
     //color the total based on the criteria
-    if (totalCost >= criticalLevel){
-        // adding the danger class will make the text red
-        totalSettings.classList.add("danger");
 
-    }
-    else if (totalCost >= warningLevel ){
-        totalSettings.classList.add("warning");
 
-    }
-    else {
-      totalSettings.classList.remove("danger");
-      totalSettings.classList.remove("warning");
-    }
+
+  if (totalCost >= criticalLevel){
+       // adding the danger class will make the text red
+       totalSettings.classList.add("danger");
+   }
+   else if (totalCost >=  warningLevel){
+       totalSettings.classList.add("warning");
+   }
+
+
+
+
+if (totalCost < criticalLevel) {
+  totalSettings.classList.remove("danger");
+}
+
+if (totalCost < warningLevel) {
+  totalSettings.classList.remove("warning");
+}
+
+
+
+
 };
 
 settingsBillAddBtn.addEventListener('click', totalSetting);
