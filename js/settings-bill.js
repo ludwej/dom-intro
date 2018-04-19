@@ -76,7 +76,7 @@ function totalSetting(){
     }
     else {
       totalSettings.classList.remove("danger");
-      totalSettings.classList.remove("danger");
+      totalSettings.classList.remove("warning");
     }
 };
 
