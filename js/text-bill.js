@@ -12,7 +12,7 @@ var callsTotal = 0;
 var smsTotal = 0;
 var totalCost=0 ;
 //add an event listener for when the add button is pressed
-
+addToBillBtn.addEventListener('click', addBtn);
 //in thefunction textBillTotal(){
     // get the value entered in the billType textfield
     function addBtn(){
@@ -48,7 +48,7 @@ var totalCost=0 ;
 
 }
 
-addToBillBtn.addEventListener('click', addBtn);
+//addToBillBtn.addEventListener('click', addBtn);
 // * add the appropriate value to the running total
 // * add nothing for invalid values that is not 'call' or 'sms'.
 // * display the latest total on the screen
