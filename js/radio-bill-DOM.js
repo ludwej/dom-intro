@@ -10,26 +10,26 @@ var totalTwo=document.querySelector(".totalTwo");
 
 //add an event listener for when e add button is pressed
 
-var callTotal=0;
-var smsTotal=0;
-var totalCost=0;
+// var callTotal=0;
+// var smsTotal=0;
+// var totalCost=0;
 
 
 
 function radioBillTotal(){
     // get the value entered in the billType textfield
     var checkedRadioBtn = document.querySelector("input[name='billItemType']:checked");
-  if (checkedRadioBtn){
-      var billItemType = checkedRadioBtn.value
-      // billItemType will be 'call' or 'sms'
-  }
-    // update the correct total
-    if (billItemType === "call"){
-        callTotal += 2.75
-    }
-    else if (billItemType === "sms"){
-        smsTotal += 0.75;
-    }
+  // if (checkedRadioBtn){
+  //     var billItemType = checkedRadioBtn.value
+  //     // billItemType will be 'call' or 'sms'
+  // }
+  //   // update the correct total
+  //   if (billItemType === "call"){
+  //       callTotal += 2.75
+  //   }
+  //   else if (billItemType === "sms"){
+  //       smsTotal += 0.75;
+  //   }
 
     callTotalTwo.innerHTML = callTotal.toFixed(2);
     smsTotalTwo.innerHTML = smsTotal.toFixed(2);
