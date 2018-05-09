@@ -1,0 +1,39 @@
+
+
+function TextBill(){
+
+  var callsTotal = 0;
+  var smsTotal = 0;
+  var totalCost = 0;
+
+function callBillTotal(billText){
+    if (billText === "call"){
+        callsTotal += 2.75
+  }
+}
+
+function returnCalls(){
+  return callsTotal;
+}
+
+function smsBillTotal(billText){
+    if (billText === "sms"){
+        smsTotal += 0.75;
+  }
+}
+
+function returnSms(){
+  return smsTotal;
+}
+function returnTotal(){
+  return totalCost = callsTotal + smsTotal;
+}
+
+  return {
+    callBillTotal,
+    returnCalls,
+    smsBillTotal,
+    returnSms,
+    returnTotal
+}
+}

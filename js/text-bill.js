@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function(){
+
 // get a reference to the textbox where the bill type is to be entered
 var billTypeText = document.querySelector(".billTypeText");
 //get a reference to the add button
@@ -8,47 +10,27 @@ var callTotalOne = document.querySelector(".callTotalOne");
 var smsTotalOne= document.querySelector(".smsTotalOne");
 var totalOne = document.querySelector(".totalOne");
 
-var callsTotal = 0;
-var smsTotal = 0;
-var totalCost=0 ;
+
 //add an event listener for when the add button is pressed
-addToBillBtn.addEventListener('click', addBtn);
-//in thefunction textBillTotal(){
-    // get the value entered in the billType textfield
-    function addBtn(){
-    // get the value entered in the billType textfield
-    var billTypeEntered = billTypeText.value.trim();
-    // update the correct total
-    if (billTypeEntered === "call"){
-        callsTotal += 2.75;
-    }
-    else if (billTypeEntered === "sms"){
-        smsTotal += 0.75;
-    }
+
+
+function textBillTotal(){
+ var billTypeEntered = billTypeText.value.trim();
+    // ... other code here
 
     //update the totals that is displayed on the screen.
-    callTotalOne.innerHTML = callsTotal.toFixed(2);
-    smsTotalOne.innerHTML = smsTotal.toFixed(2);
+    callTotalOne.innerHTML = textBillTotal.callBillTotal.toFixed(2);
+    smsTotalOne.innerHTML = textBillTotal.smsBillTotal.toFixed(2);
     var totalCost = callsTotal + smsTotal;
-  totalOne.innerHTML = totalCost.toFixed(2);
+    totalOne.innerHTML = textBillTotal.totalCost.toFixed(2);
 
-  if (totalCost >= 50){
-      // adding the danger class will make the text red
-      totalOne.classList.add("danger");
-
-  }
-  else if (totalCost >= 30){
-    totalOne.classList.add("warning");
-
-  }
- else {
-     totalOne.classList.remove("danger");
-     totalOne.classList.remove("warning");
- }
-
+    //color the total based on the criteria
+    if (totalCost >= 50){
+        // adding the danger class will make the text red
+        totalCostElem.classList.add("danger");
+    }
+    else if (totalCost >= 30){
+        totalCostElem.classList.add("warning");
+    }
 }
-
-//addToBillBtn.addEventListener('click', addBtn);
-// * add the appropriate value to the running total
-// * add nothing for invalid values that is not 'call' or 'sms'.
-// * display the latest total on the screen
+});
