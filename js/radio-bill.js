@@ -35,7 +35,10 @@ function RadioBill(){
       smsValues,
       callsValues,
       callsValues,
-      totalCost
+      totalCost,
+      RadioBill
     }
 
 }
+
+var Bill = RadioBill();

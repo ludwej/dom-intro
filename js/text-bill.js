@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+
 
 // get a reference to the textbox where the bill type is to be entered
 var billTypeText = document.querySelector(".billTypeText");
@@ -13,7 +13,8 @@ var totalOne = document.querySelector(".totalOne");
 
 //add an event listener for when the add button is pressed
 
-  var factory = TextBill();
+var factory = TextBill();
+
 function textBillTotal(){
  var billTypeEntered = billTypeText.value.trim();
     // ... other code here
@@ -34,4 +35,3 @@ function textBillTotal(){
     }
 }
 addToBillBtn.addEventListener('click', textBillTotal);
-});

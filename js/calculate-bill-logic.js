@@ -1,11 +1,11 @@
-//get a reference to the calculate button
-var calculateBtn = document.querySelector(".calculateBtn");
-
-//get a reference to the billTotal element
- var billTotalElement=document.querySelector(".billTotal")
-//get a reference to the billString
-var billStringField =document.querySelector(".billString")
-//create the function that will be called when the calculate button is pressed
+// //get a reference to the calculate button
+// var calculateBtn = document.querySelector(".calculateBtn");
+//
+// //get a reference to the billTotal element
+//  var billTotalElement=document.querySelector(".billTotal")
+// //get a reference to the billString
+// var billStringField =document.querySelector(".billString")
+// //create the function that will be called when the calculate button is pressed
 function calculateBtnClicked(billString){
     // get the string entered in the textArea
 
@@ -23,5 +23,6 @@ function calculateBtnClicked(billString){
             billTotal += 0.75;
         }
         }
+
         return billTotal
 }

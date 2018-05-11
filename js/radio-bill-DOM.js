@@ -1,3 +1,7 @@
+
+
+
+
 var billItemTypeRadioElem = document.querySelector(".billItemTypeRadio");
 var callsTotalTwoElem = document.querySelector(".callTotalTwo");
 var  smsTotalTwoElem = document.querySelector(".smsTotalTwo");
@@ -33,3 +37,4 @@ function radioBillTotal(){
 }
 //add an event listener for when the add button is pressed
 radioTotalAddBtn.addEventListener('click', radioBillTotal);
+});

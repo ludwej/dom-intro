@@ -17,7 +17,7 @@ var billItemTypeWithSettings = document.querySelector(".billItemTypeWithSettings
   var updateBtn = document.querySelector(".updateSettings");
 // create a variables that will keep track of all the settings
 
-function factories(){
+function FactoryF(){
 
    var callSettings =0;
     var  smsSettings =0;
@@ -65,18 +65,18 @@ function settingsBillTotal(billItemTypeWithSettings){
 
 
    //setters
-   function SetCallcost(num){
+   function setClalls(num){
      callCost = parseFloat(num);
    }
 
-   function SetSmscost(numb) {
+   function setSms(numb) {
     smsCost = parseFloat(numb)
    }
 
-   function SetWarning(numbe) {
+   function warningLevelSett(numbe) {
     warning = parseFloat(numbe);
    }
-   function SetCritical(number){
+   function crit(number){
     critical = parseFloat(number);
    }
 
@@ -104,10 +104,10 @@ function settingsBillTotal(billItemTypeWithSettings){
 
 return {
  settingsBillTotal,
- SetCallcost,
- SetSmscost,
- SetWarning,
- SetCritical,
+ setClalls,
+ setSms,
+ warningLevelSett,
+ crit,
  GetWarning,
  GetCritical,
  GetCallSett,
@@ -117,13 +117,13 @@ return {
        }
 }
 
-var factorys = factories();
+var facory = FactoryF();
 
   function updateSettings(){
-     factorys.SetCallcost(callCostSettings.value);
-     factorys.SetSmscost(smsCostSetting.value);
-    factorys.SetWarning(warningLevelSetting.value);
-    factorys.SetCritical(criticalLevelSetting.value);
+     facory.setClalls(callCostSettings.value);
+     facory.setSms(smsCostSetting.value);
+    facory.warningLevelSett(warningLevelSetting.value);
+    facory.crit(criticalLevelSetting.value);
   }
 
 
@@ -134,26 +134,26 @@ var factorys = factories();
          if (checkedSettingsBtn){
              var billItemTypeWithSettings = checkedSettingsBtn.value
              // billItemType will be 'call' or 'sms'
-             factorys.settingsBillTotal(billItemTypeWithSettings);
+             facory.settingsBillTotal(billItemTypeWithSettings);
          }
-        var tot = factorys.GetTotallsett();
+        var tot = facory.GetTotallsett();
 
-        callTotalSettings.innerHTML = factorys.GetCallSett().toFixed(2);
-        smsTotalSettings.innerHTML = factorys.GetSmsSett().toFixed(2);;
-        TotalSettings.innerHTML = factorys.GetTotallsett().toFixed(2);;
+        callTotalSettings.innerHTML = facory.GetCallSett().toFixed(2);
+        smsTotalSettings.innerHTML = facory.GetSmsSett().toFixed(2);;
+        TotalSettings.innerHTML = facory.GetTotallsett().toFixed(2);;
 
-          if (tot >= factorys.GetWarning()){
+          if (tot >= facory.GetWarning()){
                   // adding the danger class will make the text red
                   TotalSettings.classList.add("warning");
 
               }
-           if (tot >= factorys.GetCritical()){
+           if (tot >= facory.GetCritical()){
                   TotalSettings.classList.add("danger");
               }
-              if (tot< factorys.GetCritical()){
+              if (tot< facory.GetCritical()){
                 TotalSettings.classList.remove("danger");
               }
-              if (tot< factorys.GetWarning()){
+              if (tot< facory.GetWarning()){
                 TotalSettings.classList.remove("warning");
               }
 

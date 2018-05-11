@@ -42,18 +42,18 @@ function totalSetting(){
       return callsTotal + smsTotal ;
       }
 
-    function smsCostSett(set) {
+    function smsCostSet(set) {
       smsCost =  parseFloat(set);
     }
 
-    function callCostSett(set) {
+    function callCostSet(set) {
       callCost = parseFloat(set);
     }
     function warningLevelSett(set) {
        warningLevel = parseFloat(set);
     }
 
-    function criticalLevelSett(set) {
+    function criticalLevelSet(set) {
       criticalLevel = parseFloat(set);
 
     }

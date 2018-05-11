@@ -1,4 +1,6 @@
 //get a reference to the calculate button
+
+
 var calculateBtn = document.querySelector(".calculateBtn");
 
 //get a reference to the billTotal element
@@ -6,7 +8,7 @@ var calculateBtn = document.querySelector(".calculateBtn");
 //get a reference to the billString
 var billStringField =document.querySelector(".billString")
 //create the function that will be called when the calculate button is pressed
-function calculateBtnClicked(billString){
+// function calculateBtnClicked(billString){
     // get the string entered in the textArea
 
 //     //split the string
@@ -52,7 +54,6 @@ else{
 
 //link the function to a click event on the calculate button
 calculateBtn.addEventListener('click', inner);
-
 
     // get the string entered in the textArea
 
