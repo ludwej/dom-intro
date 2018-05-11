@@ -13,12 +13,5 @@ describe('The text-bill widget Test', function(){
 
         assert.equal(amaCall.returnSms(),2.25);
       });
-      it('should return the total amount for a string of no  Calls or Smses made', function(){
-          var amaCall = TextBill();
-          amaCall.smsBillTotal('');
-          amaCall.callBillTotal('');
-          amaCall.smsBillTotal('');
-
-          assert.equal(amaCall.returnSms(),0);
-  });
+      
 });

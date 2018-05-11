@@ -13,15 +13,15 @@ var totalOne = document.querySelector(".totalOne");
 
 //add an event listener for when the add button is pressed
 
-
+  var factory = TextBill();
 function textBillTotal(){
  var billTypeEntered = billTypeText.value.trim();
     // ... other code here
 
     //update the totals that is displayed on the screen.
-    callTotalOne.innerHTML = callsTotal.toFixed(2);
-    smsTotalOne.innerHTML = smsTotal.toFixed(2);
-    var totalCost = callsTotal + smsTotal;
+    callTotalOne.innerHTML = factory.callBillTotal().toFixed(2);
+    smsTotalOne.innerHTML = factory.smsBillTotal().toFixed(2);
+    var totalCost = factory.returnTotal();
     totalOne.innerHTML = textBillTotal.totalCost.toFixed(2);
 
     //color the total based on the criteria
@@ -33,4 +33,5 @@ function textBillTotal(){
         totalCostElem.classList.add("warning");
     }
 }
+addToBillBtn.addEventListener('click', textBillTotal);
 });
