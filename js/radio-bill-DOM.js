@@ -37,4 +37,3 @@ function radioBillTotal(){
 }
 //add an event listener for when the add button is pressed
 radioTotalAddBtn.addEventListener('click', radioBillTotal);
-});

@@ -23,7 +23,7 @@ function textBillTotal(){
     callTotalOne.innerHTML = factory.callBillTotal().toFixed(2);
     smsTotalOne.innerHTML = factory.smsBillTotal().toFixed(2);
     var totalCost = factory.returnTotal();
-    totalOne.innerHTML = textBillTotal.totalCost.toFixed(2);
+    totalOne.innerHTML = textBillTotal.toFixed(2);
 
     //color the total based on the criteria
     if (totalCost >= 50){
